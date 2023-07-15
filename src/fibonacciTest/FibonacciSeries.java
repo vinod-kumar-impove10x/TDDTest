@@ -1,7 +1,7 @@
 package fibonacciTest;
 
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
+
 import static org.testng.AssertJUnit.assertEquals;
 
 public class FibonacciSeries {
@@ -16,36 +16,42 @@ public class FibonacciSeries {
     Any negative -19 -> -1;
      */
     @Test
-    public void givenNegativeNumberReturnsNegativeOne(){
+    public void givenNegativeNumber_ReturnsNegativeOne(){
         Fibonacci fibonacci = new Fibonacci();
-        int negativeNumber = fibonacci.find(-10);
+        int negativeNumber = fibonacci.findNthNumber(-5);
         assertEquals(-1,negativeNumber);
 
     }
 
     @Test
-    public void giveZeroReturnZero(){
+    public void giveZero_returnsNegativeOne(){
         Fibonacci fibonacci = new Fibonacci();
-        int zeroNumber = fibonacci.find(0);
-        assertEquals(0,zeroNumber);
+        int negativeNumber = fibonacci.findNthNumber(0);
+        assertEquals(-1,negativeNumber);
     }
 
     @Test
-    public void givenOneReturnsOne(){
+    public void givenOne_ReturnsZero(){
         Fibonacci fibonacci = new Fibonacci();
-        int oneNumber = fibonacci.find(1);
-        assertEquals(1,oneNumber);
+        int firstNumber = fibonacci.findNthNumber(1);
+        assertEquals(0,firstNumber);
     }
     @Test
-    public void givenTwoReturnsTwo(){
+    public void givenTwo_ReturnsOne(){
         Fibonacci fibonacci = new Fibonacci();
-        int secondThNumber = fibonacci.find(2);
+        int secondThNumber = fibonacci.findNthNumber(2);
         assertEquals(1,secondThNumber);
     }
     @Test
-    public void givenFiveReturnsFive(){
+    public void givenThree_ReturnsOne(){
         Fibonacci fibonacci = new Fibonacci();
-        int fifthNumber = fibonacci.find(5);
-        assertEquals(5,fifthNumber);
+        int thirdNumber = fibonacci.findNthNumber(3);
+        assertEquals(1,thirdNumber);
+    }
+    @Test
+    public void givenFive_ReturnsThree(){
+        Fibonacci fibonacci = new Fibonacci();
+        int fifthNumber = fibonacci.findNthNumber(5);
+        assertEquals(3,fifthNumber);
     }
 }
