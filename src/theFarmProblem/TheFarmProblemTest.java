@@ -30,4 +30,18 @@ public class TheFarmProblemTest {
         int TotalLegs = theFarmProblem.findNumLegs(5, 2, 8);
         assertEquals(50,TotalLegs);
     }
+
+    @Test
+    public void givenNumberChic23Cows46Pigs35_returnsTotalLegs() {
+        TheFarmProblem theFarmProblem = new TheFarmProblem();
+        int TotalLegs = theFarmProblem.findNumLegs(23, 46, 35);
+        assertEquals(370,TotalLegs);
+    }
+
+    @Test
+    public void givenNumberChic12Cows15Pigs19_returnsTotalLegs() {
+        TheFarmProblem theFarmProblem = new TheFarmProblem();
+        int TotalLegs = theFarmProblem.findNumLegs(12, 15, 19);
+        assertEquals(160,TotalLegs);
+    }
 }

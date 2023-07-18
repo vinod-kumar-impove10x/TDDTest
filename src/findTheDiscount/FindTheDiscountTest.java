@@ -30,4 +30,18 @@ public class FindTheDiscountTest {
         int finPrice = findTheDiscount.finalPrice(100,75);
         assertEquals(25,finPrice);
     }
+
+    @Test
+    public void givenOriginalPrice9999DiscountPercentage18_returnsFinalPrice8200() {
+        FindTheDiscount findTheDiscount = new FindTheDiscount();
+        int finPrice = findTheDiscount.finalPrice(9999,18);
+        assertEquals(8200,finPrice);
+    }
+
+    @Test
+    public void givenOriginalPrice0DiscountPercentage18_returnsFinalPriceZero() {
+        FindTheDiscount findTheDiscount = new FindTheDiscount();
+        int finPrice = findTheDiscount.finalPrice(0,18);
+        assertEquals(0,finPrice);
+    }
 }

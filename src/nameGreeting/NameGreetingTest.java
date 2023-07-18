@@ -13,28 +13,35 @@ public class NameGreetingTest {
     @Test
     public void givenVinod_returnsHelloVinod(){
         NameGreeting nameGreeting = new NameGreeting();
-        String greetingName = nameGreeting.greeting("Vinod");
-        assertEquals("Hello Vinod",greetingName);
+        String greetingName = nameGreeting.addGreetingWithName("Vinod");
+        assertEquals("Hello Vinod!",greetingName);
     }
 
     @Test
     public void givenSumanth_returnsHelloSumanth(){
         NameGreeting nameGreeting = new NameGreeting();
-        String greetingName = nameGreeting.greeting("Sumanth");
-        assertEquals("Hello Sumanth",greetingName);
+        String greetingName = nameGreeting.addGreetingWithName("Sumanth");
+        assertEquals("Hello Sumanth!",greetingName);
     }
 
     @Test
     public void givenVissu_returnsHelloVissu(){
         NameGreeting nameGreeting = new NameGreeting();
-        String greetingName = nameGreeting.greeting("Vissu");
-        assertEquals("Hello Vissu",greetingName);
+        String greetingName = nameGreeting.addGreetingWithName("Vissu");
+        assertEquals("Hello Vissu!",greetingName);
     }
 
     @Test
     public void givenRenu_returnsHelloRenu(){
         NameGreeting nameGreeting = new NameGreeting();
-        String greetingName = nameGreeting.greeting("Renu");
-        assertEquals("Hello Renu",greetingName);
+        String greetingName = nameGreeting.addGreetingWithName("Renu");
+        assertEquals("Hello Renu!",greetingName);
+    }
+
+    @Test
+    public void givenEmpty_returnsEnterYourName(){
+        NameGreeting nameGreeting = new NameGreeting();
+        String greetingName = nameGreeting.addGreetingWithName("");
+        assertEquals("Enter your name",greetingName);
     }
 }

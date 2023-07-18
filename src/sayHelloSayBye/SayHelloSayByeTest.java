@@ -12,36 +12,36 @@ public class SayHelloSayByeTest {
     }
     @Test
     public void givenNameOne_returnsHelloName() {
-        Greeting greeting = new Greeting();
-        String nameGreeting = greeting.findGreeting("alon", 1);
+        SayHelloSayBye sayHelloSayBye = new SayHelloSayBye();
+        String nameGreeting = sayHelloSayBye.findHelloOrBye("alon", 1);
         assertEquals("Hello Alon",nameGreeting);
     }
 
     @Test
     public void givenNameZero_returnsByeName() {
-        Greeting greeting = new Greeting();
-        String nameGreeting = greeting.findGreeting("vinod", 0);
+        SayHelloSayBye sayHelloSayBye = new SayHelloSayBye();
+        String nameGreeting = sayHelloSayBye.findHelloOrBye("vinod", 0);
         assertEquals("Bye Vinod",nameGreeting);
     }
 
     @Test
     public void givenNameInUpperCaseOne_returnsHelloName() {
-        Greeting greeting = new Greeting();
-        String nameGreeting = greeting.findGreeting("Vissu", 1);
+        SayHelloSayBye sayHelloSayBye = new SayHelloSayBye();
+        String nameGreeting = sayHelloSayBye.findHelloOrBye("Vissu", 1);
         assertEquals("Hello Vissu",nameGreeting);
     }
 
     @Test
     public void givenNameInLowerCaseOne_returnsHelloName() {
-        Greeting greeting = new Greeting();
-        String nameGreeting = greeting.findGreeting("renu", 1);
+        SayHelloSayBye sayHelloSayBye = new SayHelloSayBye();
+        String nameGreeting = sayHelloSayBye.findHelloOrBye("renu", 1);
         assertEquals("Hello Renu",nameGreeting);
     }
 
     @Test
     public void givenNameInUpperCaseZero_returnsByeName() {
-        Greeting greeting = new Greeting();
-        String nameGreeting = greeting.findGreeting("Sumanth", 0);
+        SayHelloSayBye sayHelloSayBye = new SayHelloSayBye();
+        String nameGreeting = sayHelloSayBye.findHelloOrBye("Sumanth", 0);
         assertEquals("Bye Sumanth",nameGreeting);
     }
 }

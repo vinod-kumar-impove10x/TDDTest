@@ -13,28 +13,28 @@ public class ReversStringTest {
     @Test
     public void givenVinod_returnsDoniv(){
         ReversString reversString = new ReversString();
-        String result = reversString.revers("Vinod");
+        String result = reversString.reversStr("Vinod");
         assertEquals("doniV",result);
     }
 
     @Test
     public void givenJyothi_returnsIhtoyj(){
         ReversString reversString = new ReversString();
-        String result = reversString.revers("Jyothi");
+        String result = reversString.reversStr("Jyothi");
         assertEquals("ihtoyJ",result);
     }
 
     @Test
     public void givenSumanth_returnsHtnamus(){
         ReversString reversString = new ReversString();
-        String result = reversString.revers("Sumanth");
+        String result = reversString.reversStr("Sumanth");
         assertEquals("htnamuS",result);
     }
 
     @Test
     public void givenVissu_returnsUssiv(){
         ReversString reversString = new ReversString();
-        String result = reversString.revers("Vissu");
+        String result = reversString.reversStr("Vissu");
         assertEquals("ussiV",result);
     }
 }

@@ -1,7 +1,7 @@
 package reversString;
 
 public class ReversString {
-    public String revers(String str) {
+    public String reversStr(String str) {
         String[] words = str.split(" ");
         for (int i = 0; i < words.length; i++) {
             String word = words[i];

@@ -1,7 +1,7 @@
 package twoMakesTen;
 
 public class IsTwoMakesTen {
-    public boolean sumOfNum(int a, int b) {
+    public boolean findTwoMakesTen(int a, int b) {
         boolean result = false;
         if (a == 10 || b == 10 || a+b == 10) {
             result = true;

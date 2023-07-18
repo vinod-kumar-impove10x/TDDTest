@@ -31,4 +31,11 @@ public class NthEvenNumberTest {
         int negativeNumber = nthEvenNumber.findNthEvenNumber(-10);
         assertEquals(-1,negativeNumber);
     }
+
+    @Test
+    public void givenTirtytwo_returnSixstytwo(){
+        NthEvenNumber nthEvenNumber = new NthEvenNumber();
+        int negativeNumber = nthEvenNumber.findNthEvenNumber(32);
+        assertEquals(62,negativeNumber);
+    }
 }

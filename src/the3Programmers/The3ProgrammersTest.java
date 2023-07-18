@@ -30,4 +30,11 @@ public class The3ProgrammersTest {
         int difference = the3Programmers.difBtwMaxMinOf3Progrs(1, 5, 9);
         assertEquals(8,difference);
     }
+
+    @Test
+    public void given37_23_89_returns_66() {
+        The3Programmers the3Programmers = new The3Programmers();
+        int difference = the3Programmers.difBtwMaxMinOf3Progrs(37, 23, 89);
+        assertEquals(66,difference);
+    }
 }

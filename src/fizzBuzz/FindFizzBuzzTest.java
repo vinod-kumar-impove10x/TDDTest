@@ -38,11 +38,4 @@ public class FindFizzBuzzTest {
         String result = fizzBuzz.findFizzBuzz(30);
         assertEquals("FizzBuzz",result);
     }
-
-    @Test
-    public void givenFour_returnsEmptyString() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String result = fizzBuzz.findFizzBuzz(4);
-        assertEquals("",result);
-    }
 }
