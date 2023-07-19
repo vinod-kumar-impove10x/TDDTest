@@ -32,4 +32,10 @@ public class ScoringSystemTest {
         assertArrayEquals(new int[] {1, 0, 0}, onlyAScoreZeros );
     }
 
+    @Test
+    public void givenB_returnsZeroOneZero() {
+        ScoringSystem scoringSystem = new ScoringSystem();
+        int[] onlyBScoreZeros = scoringSystem.calculateScore("B");
+        assertArrayEquals(new int[] {0, 1, 0}, onlyBScoreZeros );
+    }
 }
