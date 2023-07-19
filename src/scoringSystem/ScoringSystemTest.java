@@ -38,4 +38,11 @@ public class ScoringSystemTest {
         int[] onlyBScoreZeros = scoringSystem.calculateScore("B");
         assertArrayEquals(new int[] {0, 1, 0}, onlyBScoreZeros );
     }
+
+    @Test
+    public void givenC_returnsZeroZeroOne() {
+        ScoringSystem scoringSystem = new ScoringSystem();
+        int[] onlyCScoreZeros = scoringSystem.calculateScore("C");
+        assertArrayEquals(new int[] {0, 0, 1}, onlyCScoreZeros );
+    }
 }
