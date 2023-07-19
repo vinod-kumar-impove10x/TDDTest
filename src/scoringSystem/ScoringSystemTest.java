@@ -31,4 +31,5 @@ public class ScoringSystemTest {
         int[] onlyAScoreZeros = scoringSystem.calculateScore("A");
         assertArrayEquals(new int[] {1, 0, 0}, onlyAScoreZeros );
     }
+
 }
