@@ -28,21 +28,28 @@ public class ScoringSystemTest {
     @Test
     public void givenA_returnsOneZeroZero() {
         ScoringSystem scoringSystem = new ScoringSystem();
-        int[] onlyAScoreZeros = scoringSystem.calculateScore("A");
-        assertArrayEquals(new int[] {1, 0, 0}, onlyAScoreZeros );
+        int[] onlyAScore = scoringSystem.calculateScore("A");
+        assertArrayEquals(new int[] {1, 0, 0}, onlyAScore );
     }
 
     @Test
     public void givenB_returnsZeroOneZero() {
         ScoringSystem scoringSystem = new ScoringSystem();
-        int[] onlyBScoreZeros = scoringSystem.calculateScore("B");
-        assertArrayEquals(new int[] {0, 1, 0}, onlyBScoreZeros );
+        int[] onlyBScore = scoringSystem.calculateScore("B");
+        assertArrayEquals(new int[] {0, 1, 0}, onlyBScore );
     }
 
     @Test
     public void givenC_returnsZeroZeroOne() {
         ScoringSystem scoringSystem = new ScoringSystem();
-        int[] onlyCScoreZeros = scoringSystem.calculateScore("C");
-        assertArrayEquals(new int[] {0, 0, 1}, onlyCScoreZeros );
+        int[] onlyCScore = scoringSystem.calculateScore("C");
+        assertArrayEquals(new int[] {0, 0, 1}, onlyCScore );
+    }
+
+    @Test
+    public void givenAB_returnsOneOneZero() {
+        ScoringSystem scoringSystem = new ScoringSystem();
+        int[] abScores = scoringSystem.calculateScore("AB");
+        assertArrayEquals(new int[] {1, 1, 0}, abScores );
     }
 }
