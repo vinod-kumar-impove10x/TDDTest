@@ -1,7 +1,7 @@
 package fibonacci;
 
 public class Fibonacci {
-    public int findFibonacci(int n) {
+    public int findNthNumber(int n) {
        if (n < 0){
            return -1;
        } else if ( n <= 0) {
@@ -10,7 +10,8 @@ public class Fibonacci {
            return 0;
        }else if (n == 2) {
            return 1;
+       } else {
+           return findNthNumber(n-1) + findNthNumber(n-2);
        }
-          return 0;
     }
 }
