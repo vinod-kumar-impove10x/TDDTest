@@ -23,4 +23,11 @@ public class FibonacciTest {
         int zeroFibonacci = fibonacci.findFibonacci(0);
         assertEquals(-1,zeroFibonacci);
     }
+
+    @Test
+    public void givenOne_returnsZero() {
+        Fibonacci fibonacci = new Fibonacci();
+        int oneFibonacci = fibonacci.findFibonacci(1);
+        assertEquals(0,oneFibonacci);
+    }
 }
