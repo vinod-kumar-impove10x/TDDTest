@@ -24,4 +24,11 @@ public class ScoringSystemTest {
         int[] allZeros = scoringSystem.calculateScore("");
         assertArrayEquals(new int[3], allZeros );
     }
+
+    @Test
+    public void givenA_returnsOneZeroZero() {
+        ScoringSystem scoringSystem = new ScoringSystem();
+        int[] onlyAScoreZeros = scoringSystem.calculateScore("A");
+        assertArrayEquals(new int[] {1, 0, 0}, onlyAScoreZeros );
+    }
 }
