@@ -27,7 +27,14 @@ public class FibonacciTest {
     @Test
     public void givenOne_returnsZero() {
         Fibonacci fibonacci = new Fibonacci();
-        int oneFibonacci = fibonacci.findFibonacci(1);
-        assertEquals(0,oneFibonacci);
+        int firstFibonacci = fibonacci.findFibonacci(1);
+        assertEquals(0,firstFibonacci);
+    }
+
+    @Test
+    public void givenTwo_returnsOne() {
+        Fibonacci fibonacci = new Fibonacci();
+        int secondFibonacci = fibonacci.findFibonacci(2);
+        assertEquals(1,secondFibonacci);
     }
 }
