@@ -73,4 +73,18 @@ public class ScoringSystemTest {
         int[] abbcScores = scoringSystem.calculateScore("ABBC");
         assertArrayEquals(new int[] {1, 2, 1}, abbcScores);
     }
+
+    @Test
+    public void givenABCC_returnsOneOneTwo() {
+        ScoringSystem scoringSystem = new ScoringSystem();
+        int[] abccScores = scoringSystem.calculateScore("ABCC");
+        assertArrayEquals(new int[] {1, 1, 2}, abccScores);
+    }
+
+    @Test
+    public void givenABCBACC_returnsTwoTwoThree() {
+        ScoringSystem scoringSystem = new ScoringSystem();
+        int[] abcbaccScores = scoringSystem.calculateScore("ABCBACC");
+        assertArrayEquals(new int[] {2, 2, 3}, abcbaccScores);
+    }
 }
