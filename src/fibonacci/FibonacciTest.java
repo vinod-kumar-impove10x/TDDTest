@@ -44,4 +44,11 @@ public class FibonacciTest {
         int thirdFibonacci = fibonacci.findNthNumber(3);
         assertEquals(1,thirdFibonacci);
     }
+
+    @Test
+    public void givenFour_returnsTwo() {
+        Fibonacci fibonacci = new Fibonacci();
+        int thirdFibonacci = fibonacci.findNthNumber(4);
+        assertEquals(2,thirdFibonacci);
+    }
 }
