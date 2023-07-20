@@ -8,14 +8,22 @@ public class NameInverter {
     public String invertName(String name) {
         if (name.equals("")) {
             return "";
-        }else if (!name.trim().contains(" ")) {
+        }else if (isSingleWord(name)) {
             return name.trim();
         }else {
-            ArrayList<String> names = new ArrayList<>(Arrays.asList(name.trim().split("\\s+")));
-            removeHonorifics(names);
-            String postNominal = getPostNominal(names.subList(2, names.size()));
-            return (names.get(1) + ", " + names.get(0) + " " + postNominal).trim();
+            return formatMultiElementName(name);
         }
+    }
+
+    private static boolean isSingleWord(String name) {
+        return !name.trim().contains(" ");
+    }
+
+    private static String formatMultiElementName(String name) {
+        ArrayList<String> names = new ArrayList<>(Arrays.asList(name.trim().split("\\s+")));
+        removeHonorifics(names);
+        String postNominal = getPostNominal(names.subList(2, names.size()));
+        return (names.get(1) + ", " + names.get(0) + " " + postNominal).trim();
     }
 
     private static String getPostNominal(List<String> postNominalList) {
@@ -27,8 +35,12 @@ public class NameInverter {
     }
 
     private static void removeHonorifics(ArrayList<String> names) {
-        if (names.get(0).matches("Mrs.|Mr.|Miss") && names.size() > 2) {
+        if (hasHonorifics(names) && names.size() > 2) {
             names.remove(0);
         }
+    }
+
+    private static boolean hasHonorifics(ArrayList<String> names) {
+        return names.get(0).matches("Mrs.|Mr.|Miss");
     }
 }
