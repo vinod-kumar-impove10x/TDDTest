@@ -11,10 +11,14 @@ public class NameInverter {
             return name.trim();
         }else {
             ArrayList<String> names = new ArrayList<>(Arrays.asList(name.trim().split("\\s+")));
-            if (names.get(0).matches("Mrs.|Mr.|Miss") && names.size() > 2) {
-                names.remove(0);
-            }
+            removeHonorifics(names);
             return names.get(1) + ", " + names.get(0);
+        }
+    }
+
+    private static void removeHonorifics(ArrayList<String> names) {
+        if (names.get(0).matches("Mrs.|Mr.|Miss") && names.size() > 2) {
+            names.remove(0);
         }
     }
 }
