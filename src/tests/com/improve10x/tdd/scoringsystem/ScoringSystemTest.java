@@ -1,4 +1,4 @@
-package scoringSystem;
+package com.improve10x.tdd.scoringsystem;
 
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package scoringSystem;
+package com.improve10x.tdd.scoringsystem;
 
 public class ScoringSystem {
     public int[] calculateScore(String score) {
