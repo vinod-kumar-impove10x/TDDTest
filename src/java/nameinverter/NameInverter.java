@@ -12,7 +12,8 @@ public class NameInverter {
         }else {
             ArrayList<String> names = new ArrayList<>(Arrays.asList(name.trim().split("\\s+")));
             removeHonorifics(names);
-            return names.get(1) + ", " + names.get(0);
+            String postNominal = (names.size() > 2) ? names.get(2) : "";
+            return (names.get(1) + ", " + names.get(0) + " " + postNominal).trim();
         }
     }
 

@@ -64,4 +64,12 @@ public class NameInverterTest {
         String invertedName = nameInverter.invertName("Mr. first last");
         assertEquals("last, first", invertedName);
     }
+
+    //input = givenPostNominals "first last MSc.", output = stayAtEnd "first last MSc."
+    @Test
+    public void givenFirstLastMSc_returnFirstLastMSc() {
+        NameInverter nameInverter = new NameInverter();
+        String invertedName = nameInverter.invertName("first last MSc.");
+        assertEquals("last, first MSc.", invertedName);
+    }
 }
