@@ -17,4 +17,12 @@ public class NameInverterTest {
         String invertedName = nameInverter.invertName("");
         assertEquals("", invertedName);
     }
+
+    //input = "name", output = "name"
+    @Test
+    public void givenSingleWord_returnSingleWord() {
+        NameInverter nameInverter = new NameInverter();
+        String invertedName = nameInverter.invertName("name");
+        assertEquals("name", invertedName);
+    }
 }
