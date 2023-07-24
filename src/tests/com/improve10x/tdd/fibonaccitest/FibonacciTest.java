@@ -1,5 +1,6 @@
-package com.improve10x.tdd.fibonacci;
+package com.improve10x.tdd.fibonaccitest;
 
+import com.improve10x.tdd.fibonacci.Fibonacci;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;

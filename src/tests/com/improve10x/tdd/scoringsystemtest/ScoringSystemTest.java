@@ -1,5 +1,6 @@
-package com.improve10x.tdd.scoringsystem;
+package com.improve10x.tdd.scoringsystemtest;
 
+import com.improve10x.tdd.scoringsystem.ScoringSystem;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;

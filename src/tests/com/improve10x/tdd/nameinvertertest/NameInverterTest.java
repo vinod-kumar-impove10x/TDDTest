@@ -1,5 +1,6 @@
-package nameinverter;
+package com.improve10x.tdd.nameinvertertest;
 
+import com.improve10x.tdd.nameinverter.NameInverter;
 import org.testng.annotations.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -61,7 +62,7 @@ public class NameInverterTest {
     @Test
     public void givenMrFirstLast_returnLastFirst() {
         NameInverter nameInverter = new NameInverter();
-        String invertedName = nameInverter.invertName("Mr. first last");
+        String invertedName = nameInverter.invertName("Miss. first last");
         assertEquals("last, first", invertedName);
     }
 

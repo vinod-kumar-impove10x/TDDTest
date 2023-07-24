@@ -1,4 +1,4 @@
-package nameinverter;
+package com.improve10x.tdd.nameinverter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,6 +41,6 @@ public class NameInverter {
     }
 
     private static boolean hasHonorifics(ArrayList<String> names) {
-        return names.get(0).matches("Mrs.|Mr.|Miss");
+        return names.get(0).matches("Mrs.|Mr.|Miss.");
     }
 }
