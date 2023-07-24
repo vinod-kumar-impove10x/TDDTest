@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PlayerTest {
     private ByteArrayOutputStream outputStream;
@@ -50,5 +51,12 @@ public class PlayerTest {
     public void givenNoHealth_whenGetHealthCalled_thenReturns100(){
         Player player = new Player("Name");
         assertEquals(100,player.getHealth());
+    }
+
+    @Test
+    public void givenHealthMinusOne_thenThrowsInvalidHealthException() {
+        assertThrows(Player.InvalidHealthException.class,
+                () -> new Player("Name", -1),
+                "Health should be between 0 and 100");
     }
 }
