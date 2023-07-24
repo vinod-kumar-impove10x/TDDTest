@@ -66,4 +66,10 @@ public class PlayerTest {
                 () -> new Player("Name", 101),
                 "Health should be between 0 and 100");
     }
+
+    @Test
+    public void givenHealth100_whenGetHealthCalled_thenReturn100() throws Player.InvalidHealthException {
+        Player player = new Player("Name", 100);
+        assertEquals(100, player.getHealth());
+    }
 }
