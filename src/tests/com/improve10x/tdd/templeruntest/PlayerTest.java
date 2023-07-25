@@ -1,5 +1,6 @@
 package com.improve10x.tdd.templeruntest;
 
+import com.improve10x.tdd.templerun.Coin;
 import com.improve10x.tdd.templerun.Player;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -90,5 +91,12 @@ public class PlayerTest {
     public void whenGetScoreCalled_returns0() throws Player.InvalidHealthException {
         Player player = new Player("Name");
         assertEquals(0, player.getScore());
+    }
+
+    @Test
+    public void givenCoin10_whenGetScoreCalled_returns10() throws Player.InvalidHealthException {
+        Player player = new Player("Name");
+        player.collectCoin(new Coin(10));
+        assertEquals(10, player.getScore());
     }
 }

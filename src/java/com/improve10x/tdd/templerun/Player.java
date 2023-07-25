@@ -32,6 +32,10 @@ public class Player {
         return 0;
     }
 
+    public void collectCoin(Coin coin) {
+
+    }
+
     public class InvalidHealthException extends RuntimeException {
     }
 }
