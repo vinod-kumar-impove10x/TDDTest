@@ -2,7 +2,7 @@ package com.improve10x.tdd.templeruntest;
 
 import com.improve10x.tdd.templerun.Player;
 import org.junit.jupiter.api.BeforeEach;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -71,5 +71,24 @@ public class PlayerTest {
     public void givenHealth100_whenGetHealthCalled_thenReturn100() throws Player.InvalidHealthException {
         Player player = new Player("Name", 100);
         assertEquals(100, player.getHealth());
+    }
+
+    @Test
+    public void givenHealth90_whenGetHealthCalled_thenReturn90() throws Player.InvalidHealthException {
+        Player player = new Player("Name", 90);
+        assertEquals(90, player.getHealth());
+    }
+
+    @Test
+    public void whenRunCalled_displaysRunningMessage() throws Player.InvalidHealthException {
+        Player player = new Player("Name", 100);
+        player.run();
+        assertEquals("Running...!", outputStream.toString().trim());
+    }
+
+    @Test
+    public void whenGetScoreCalled_returns0() throws Player.InvalidHealthException {
+        Player player = new Player("Name");
+        assertEquals(0, player.getScore());
     }
 }
