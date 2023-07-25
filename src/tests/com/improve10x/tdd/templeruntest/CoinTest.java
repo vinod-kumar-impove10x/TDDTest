@@ -14,4 +14,11 @@ public class CoinTest {
                 "Coin value should be between 0 to 100");
 
     }
+
+    @Test
+    public void given101_throwsInvalidCoinValueException() {
+        assertThrows(Coin.InvalidCoinValueException.class,
+                () -> new Coin(101),
+                "Coin value should be between 0 to 100");
+    }
 }
