@@ -99,4 +99,13 @@ public class PlayerTest {
         player.collectCoin(new Coin(10));
         assertEquals(10, player.getScore());
     }
+
+    @Test
+    public void givenCoins10and20_whenGetScoreCalled_returns30() throws Player.InvalidHealthException {
+        Player player = new Player("Name");
+        player.collectCoin(new Coin(10));
+        player.run();
+        player.collectCoin(new Coin(20));
+        assertEquals(30, player.getScore());
+    }
 }

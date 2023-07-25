@@ -36,7 +36,7 @@ public class Player {
     }
 
     public void collectCoin(Coin coin) {
-        this.score = coin.getValue();
+        this.score += coin.getValue();
 
     }
 
